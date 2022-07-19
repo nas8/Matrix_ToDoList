@@ -1,0 +1,219 @@
+body {
+    height: 100%;
+    font-family: monospace;
+    margin: 0;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+canvas {
+    background-color: black;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
+    border: 2px rgb(104, 104, 104) solid;
+    border-radius: 10px;
+
+    position: absolute;
+    z-index: 3;
+    top: 100px;
+    left: 50%;
+    margin-left: -300px;
+
+    overflow: hidden;
+
+    padding: 10px;
+}
+
+.flex-wrapper__header {
+    font-family: monospace;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #fff;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.static-text {
+    text-align: left;
+}
+
+.animated-text {
+    width: 43ch;
+    font-size: 15px;
+    border-right: 1.5px solid;
+
+    animation: printed-text 7s steps(43),
+    flashing-border 0.75s 7s step-end infinite;
+
+}
+
+@keyframes flashing-border {
+    0%{
+        border-color: #fff;
+    }
+    50%{
+        border-color: transparent;
+    }
+    100%{
+        border-color: #fff;
+    }
+}
+
+@keyframes printed-text {
+    from{
+        width: 0;
+    }
+}
+
+.add-todo-wrapper {
+    display: flex;
+    width: 250px;
+    min-height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input-wrapper {
+    width: 80%;
+}
+
+.input-wrapper input {
+    background-color: transparent;
+    color: #ffff;
+    width: 100%;
+    height: 25px;
+    border: rgb(104, 104, 104) 1px solid;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+.input-wrapper input:focus {
+    border: rgb(255, 255, 255) 1px solid;
+}
+
+.button-wrapper button {
+    width: 40px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #ffff;
+    outline: none;
+    border: rgb(104, 104, 104) 1px solid;
+    height: 29px;
+    cursor: pointer;
+
+    transition: all 0.2s linear;
+}
+
+.button-wrapper button:hover {
+    border: rgb(255, 255, 255) 1px solid;
+}
+
+.todos-wrapper {
+    width: auto;
+    max-height: 435px;
+    overflow-y: scroll;
+    padding: 0 5px;
+}
+
+.todo-item {
+    display: flex;
+    width: 500px;
+    min-height: 50px;
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.todo-item.checked {
+    background-color: darkgray;
+    opacity: 0.5;
+}
+
+.todo-item.deletion {
+    animation: opacity 1s ease-in-out;
+}
+
+.description {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    color: floralwhite;
+}
+
+.buttons {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.buttons input {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.buttons button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: 1px solid rgb(104, 104, 104);
+    color: #ffff;
+    cursor: pointer;
+    height: 25px;
+    border-radius: 5px;
+
+    transition: all 0.2s linear;
+}
+
+
+.buttons button:hover {
+    border: 1px solid rgb(253, 253, 253);
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.todos-wrapper::-webkit-scrollbar {
+    width: 0px;
+}
+
+.todos-wrapper.scroll::-webkit-scrollbar  {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: rgb(47, 47, 47);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(104, 104, 104);
+    border-radius: 20px;
+    border: 1px rgba(104, 104, 104, 1) solid;
+}

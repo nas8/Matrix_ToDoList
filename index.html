@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>MatrixToDoListApp</title>
+</head>
+
+<body>
+<canvas id="canvas">
+</canvas>
+
+<div class="flex-wrapper">
+    <div class="flex-wrapper__header">
+        <p class="animated-text">Neo, you should add your tasks for today...</p>
+    </div>
+
+    <div class="add-todo-wrapper">
+        <div class="input-wrapper">
+            <input type="text" id="description-task" required>
+        </div>
+        <div class="button-wrapper">
+            <button id="add-task-btn">Add</button>
+        </div>
+    </div>
+    <p>Your tasks:</p>
+    <div class="todos-wrapper">
+    </div>
+</div>
+
+<script src="matrix-rain.js"></script>
+<script src="list-logic.js"></script>
+</body>
+
+
+</html>
