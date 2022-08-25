@@ -7,12 +7,22 @@ body {
 }
 
 canvas {
+    position: absolute;
     background-color: black;
+    top: 0;
+    left: 0;
 }
 
 p {
     color: rgb(255, 255, 255);
     text-align: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-wrapper {
@@ -26,15 +36,10 @@ p {
     border: 2px rgb(104, 104, 104) solid;
     border-radius: 10px;
 
-    position: absolute;
-    z-index: 3;
-    top: 100px;
-    left: 50%;
-    margin-left: -300px;
-
     overflow: hidden;
-
     padding: 10px;
+
+    margin-top: 100px;
 }
 
 .flex-wrapper__header {
@@ -216,4 +221,79 @@ p {
     background-color: rgb(104, 104, 104);
     border-radius: 20px;
     border: 1px rgba(104, 104, 104, 1) solid;
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    .flex-wrapper {
+        width: 400px;
+
+    }
+
+    .todo-item {
+        width: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .flex-wrapper {
+        width: 340px;
+    }
+
+    .animated-text {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .todo-item {
+        width: 310px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .flex-wrapper {
+        width: 290px;
+
+    }
+
+    .animated-text {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .todo-item {
+        width: 260px;
+    }
+}
+
+@media (max-width: 330px) {
+
+    .flex-wrapper {
+        width: 270px;
+
+    }
+
+    .animated-text {
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .todo-item {
+        width: 250px;
+    }
 }

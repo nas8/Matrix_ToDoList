@@ -12,23 +12,30 @@
 <canvas id="canvas">
 </canvas>
 
-<div class="flex-wrapper">
-    <div class="flex-wrapper__header">
-        <p class="animated-text">Neo, you should add your tasks for today...</p>
-    </div>
+<div container>
+    <div class="flex-wrapper">
+        <div class="flex-wrapper__header">
+            <p class="animated-text">Neo, you should add your tasks for today...</p>
+        </div>
 
-    <div class="add-todo-wrapper">
-        <div class="input-wrapper">
-            <input type="text" id="description-task" required>
+        <div class="add-todo-wrapper">
+            <div class="input-wrapper">
+                <input type="text" id="description-task" required>
+            </div>
+            <div class="button-wrapper">
+                <button id="add-task-btn">Add</button>
+            </div>
         </div>
-        <div class="button-wrapper">
-            <button id="add-task-btn">Add</button>
+        <p>Your tasks:</p>
+        <div class="todos-wrapper">
         </div>
-    </div>
-    <p>Your tasks:</p>
-    <div class="todos-wrapper">
     </div>
 </div>
+
+
+<!-- <audio autoplay>
+    <source src="music/matrix-theme.mp3" type="audio/mpeg">
+</audio> -->
 
 <script src="matrix-rain.js"></script>
 <script src="list-logic.js"></script>
