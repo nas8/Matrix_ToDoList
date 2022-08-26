@@ -87,16 +87,15 @@ p {
 
 .add-todo-wrapper {
     display: flex;
-    width: 400px;
-    min-height: 40px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 5px;
     padding: 10px;
 }
 
 .input-wrapper {
-    width: 87%;
+    width: 300px;
+    margin-right: 10px;
 }
 
 .input-wrapper input {
@@ -163,8 +162,6 @@ p {
     display: flex;
     align-items: center;
     color: floralwhite;
-
-    overflow-y: scroll;
 }
 
 .buttons {
@@ -289,13 +286,6 @@ p {
         width: 380px;
     }
 
-    .add-todo-wrapper {
-        width: 300px;
-    }
-
-    .input-wrapper {
-        width: 83%;
-    }
 }
 
 @media (max-width: 480px) {
@@ -326,12 +316,8 @@ p {
         height: 25px;
     }
 
-    .add-todo-wrapper {
-        width: 280px;
-    }
-
     .input-wrapper {
-        width: 82%;
+        width: 200px;
     }
 }
 
@@ -368,11 +354,4 @@ p {
         font-size: 12px;
     }
 
-    .todos-wrapper {
-        font-size: 12px;
-    }
-
-    .todo-item {
-        width: 250px;
-    }
 }
