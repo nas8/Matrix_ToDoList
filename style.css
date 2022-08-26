@@ -33,7 +33,7 @@ p {
     width: 600px;
     backdrop-filter: blur(5px);
     margin: 0 auto;
-    border: 2px rgb(104, 104, 104) solid;
+    border: 1px rgb(104, 104, 104) solid;
     border-radius: 10px;
 
     overflow: hidden;
@@ -86,7 +86,7 @@ p {
 
 .add-todo-wrapper {
     display: flex;
-    width: 250px;
+    width: 400px;
     min-height: 40px;
     justify-content: space-between;
     align-items: center;
@@ -95,7 +95,7 @@ p {
 }
 
 .input-wrapper {
-    width: 80%;
+    width: 87%;
 }
 
 .input-wrapper input {
@@ -158,14 +158,13 @@ p {
 }
 
 .description {
-    width: 80%;
+    width: 85%;
     display: flex;
     align-items: center;
     color: floralwhite;
 }
 
 .buttons {
-    width: 20%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -224,6 +223,56 @@ p {
 }
 
 
+/* ======= Play/Pause buttons ======= */
+
+.play-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    cursor: pointer;
+}
+
+.play-btn__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.control {
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    right: 0;
+
+    transition: all 0.1s linear;
+}
+
+.control.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.svg:hover path {
+    fill: white;
+}
+
+
+
+/* ======= Media ======= */
 
 
 @media (max-width: 767px) {
@@ -236,26 +285,53 @@ p {
     .todo-item {
         width: 380px;
     }
+
+    .add-todo-wrapper {
+        width: 300px;
+    }
+
+    .input-wrapper {
+        width: 83%;
+    }
 }
 
 @media (max-width: 480px) {
 
     .flex-wrapper {
         width: 340px;
+        margin-top: 60px;
     }
 
-    .animated-text {
-        font-size: 14px;
-    }
-
-    p {
-        font-size: 14px;
+    .animated-text, .description, .p {
+        font-size: 13px;
     }
 
     .todo-item {
         width: 310px;
     }
+
+    .play-btn {
+        top: 10px;
+        right: 10px;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .buttons input {
+        width: 25px;
+        height: 25px;
+    }
+
+    .add-todo-wrapper {
+        width: 280px;
+    }
+
+    .input-wrapper {
+        width: 82%;
+    }
 }
+
 
 @media (max-width: 380px) {
 
@@ -264,11 +340,7 @@ p {
 
     }
 
-    .animated-text {
-        font-size: 12px;
-    }
-
-    p {
+    .animated-text, .description, .p {
         font-size: 12px;
     }
 
@@ -290,6 +362,10 @@ p {
     }
 
     p {
+        font-size: 12px;
+    }
+
+    .todos-wrapper {
         font-size: 12px;
     }
 
