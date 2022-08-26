@@ -11,6 +11,7 @@ canvas {
     background-color: black;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 p {
@@ -162,6 +163,8 @@ p {
     display: flex;
     align-items: center;
     color: floralwhite;
+
+    overflow-y: scroll;
 }
 
 .buttons {
