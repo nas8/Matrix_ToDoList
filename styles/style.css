@@ -98,7 +98,7 @@ p {
     display: flex;
     width: 100%;
     max-width: 300px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .input-wrapper input {
@@ -117,7 +117,12 @@ p {
 }
 
 .button-wrapper button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 40px;
+    height: 25px;
     background-color: transparent;
     border-radius: 5px;
     color: #ffff;
