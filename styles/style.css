@@ -89,12 +89,15 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     border-radius: 5px;
     padding: 10px;
 }
 
 .input-wrapper {
-    width: 300px;
+    display: flex;
+    width: 100%;
+    max-width: 300px;
     margin-right: 10px;
 }
 
@@ -133,8 +136,9 @@ p {
 .todos-wrapper {
     width: auto;
     max-height: 435px;
-    overflow-y: scroll;
     padding: 0 5px;
+
+    overflow-y: scroll;
 }
 
 .todo-item {
@@ -162,6 +166,7 @@ p {
     display: flex;
     align-items: center;
     color: floralwhite;
+    overflow: hidden;
 }
 
 .buttons {
